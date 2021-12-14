@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oniguruma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/resources/grok_exporter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/resources/grok_exporter/logstash-patterns-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/resources/oniguruma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tmp/oniguruma" vcs="Git" />
+  </component>
+</project>

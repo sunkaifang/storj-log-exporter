@@ -8,6 +8,7 @@ imports:
 - type: grok_patterns
   dir: /app/logstash-patterns-core/patterns
 grok_patterns:
+- 'MyException (\w*)Exception'
 metrics:
 - type: counter
   name: storj_pieces_delete_successful
@@ -114,6 +115,14 @@ metrics:
   labels:
     loglevel: 'ERROR'
     type: '{{.TYPE}}'
+
+- type: counter
+  name: my_exception
+  help: Total number of my-exception messages in log and their type
+  match: '%{MyException:myexception}\s*ERROR\s*%{DATA:TYPE}\s*\{%{DATA}\}'
+  labels:
+    loglevel: 'ERROR'
+    myexception: '{{.myexception}}'
 
 server:
   protocol: http
